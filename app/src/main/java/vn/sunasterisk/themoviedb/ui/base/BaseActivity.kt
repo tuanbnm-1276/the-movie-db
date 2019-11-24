@@ -5,6 +5,7 @@ import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import vn.sunasterisk.themoviedb.BR
 
 abstract class BaseActivity<ViewBinding : ViewDataBinding, ViewModel : BaseViewModel> :
     AppCompatActivity() {
@@ -17,6 +18,14 @@ abstract class BaseActivity<ViewBinding : ViewDataBinding, ViewModel : BaseViewM
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        initViewBinding()
+        initView();
+    }
+
+    abstract fun initView()
+
+    private fun initViewBinding() {
         viewBinding = DataBindingUtil.setContentView(this, layoutId)
+        viewBinding.setVariable(BR.viewModel, viewModel)
     }
 }

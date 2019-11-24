@@ -1,7 +1,8 @@
-package vn.sunasterisk.themoviedb
+package vn.sunasterisk.themoviedb.ui.screen
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import vn.sunasterisk.themoviedb.R
 
 class MainActivity : AppCompatActivity() {
 
