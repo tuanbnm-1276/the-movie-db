@@ -40,6 +40,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 
+    implementation 'com.google.android.material:material:1.0.0'
+
     //1. LiveData and ViewModel
     def lifecycle_version = "2.0.0"
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
@@ -60,6 +62,12 @@ dependencies {
 
     //3. Navigation
     def nav_version = "2.1.0"
+
+    //4. Koin
+    // implementation 'org.koin:koin-core:2.0.1'
+    // implementation 'org.koin:koin-androidx-scope:2.0.1'
+    implementation 'org.koin:koin-androidx-viewmodel:2.0.1'
+    implementation 'org.koin:koin-androidx-ext:2.0.1'
 
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
